@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const PaperLayout:React.FC = ({children}) =>  {
+const PaperLayout:React.FC<any> = ({children}: any) =>  {
   const classes = useStyles();
 
   return (

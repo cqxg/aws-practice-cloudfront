@@ -8,7 +8,7 @@ import Header from "components/MainLayout/components/Header";
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
+      {'Copyright RSS 2022'}
       <Link color="inherit" href="https://material-ui.com/">
         My Store
       </Link>{' '}
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const MainLayout: React.FC = ({children}) => {
+const MainLayout: React.FC<any> = ({children}: any) => {
   const classes = useStyles();
 
   return (
@@ -41,7 +41,7 @@ const MainLayout: React.FC = ({children}) => {
       </main>
       <footer className={classes.footer}>
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-          Thank you for your purchase!
+          Thank you for your purchase!!!!
         </Typography>
         <Copyright/>
       </footer>

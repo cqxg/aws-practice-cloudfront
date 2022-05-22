@@ -5,6 +5,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "deploy:s3":"serverless client deploy --no-config-change --no-policy-change --no-cors-change",
+    "build:deploy": "npm run build && npm run deploy:s3",
     "client:deploy": "sls client deploy --no-config-change --no-policy-change --no-cors-change",
     "client:deploy:nc": "npm run client:deploy -- --no-confirm",
     "client:build:deploy": "npm run build && npm run client:deploy",
@@ -17,7 +19,8 @@
     "cloudfront:update:build:deploy": "npm run cloudfront:setup && npm run cloudfront:build:deploy",
     "cloudfront:update:build:deploy:nc": "npm run cloudfront:setup && npm run cloudfront:build:deploy:nc",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "pisya": "file:./serverless-single-page-app-plugin"
   },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
@@ -25,7 +28,7 @@
     "@reduxjs/toolkit": "^1.2.5",
     "@types/lodash": "^4.14.158",
     "@types/node": "^12.0.0",
-    "@types/react": "^16.9.43",
+    "@types/react": "^18.0.9",
     "@types/react-dom": "^16.9.8",
     "@types/react-redux": "^7.1.7",
     "@types/react-router-dom": "^5.1.5",
@@ -42,8 +45,8 @@
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "serverless": "^2.29.0",
-    "serverless-finch": "^2.6.0",
+    "serverless": "^3.18.1",
+    "serverless-finch": "^4.0.0",
     "typescript": "~4.3.5",
     "yup": "^0.29.1"
   },
